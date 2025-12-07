@@ -2638,10 +2638,16 @@ input, select, textarea {
 			margin: 0;
 		}
 
-		#header .image.avatar {
-			margin: 0 0 1em 0;
-			width: 6.25em;
-		}
+		#header /* Make the avatar image perfectly round */
+.image.avatar img {
+    width: 250px;          /* Make width and height equal */
+    height: 250px;
+    object-fit: cover;     /* Prevent stretching, keep face centered */
+    border-radius: 50%;    /* Circle */
+    display: block;        /* Removes extra space under image */
+    margin: 0 auto;        /* Center image if needed */
+}
+
 
 /* Footer */
 
